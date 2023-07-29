@@ -1,0 +1,205 @@
+/* start global rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* small screen */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium screen */
+@media(min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large screen */
+@media(min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* end global rules */
+/* start header  */
+.page {
+    background: black;
+}
+header {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+.logo img{
+    width: 70px;
+}
+header ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    justify-content: flex-end;
+}
+header ul li {
+    margin-left: 35px;
+}
+header ul li a {
+    color: white;
+    font-size: 22px;
+}
+@media (max-width:767px) {
+    .page .container header ul {
+        display: none;
+    }
+    .logo {
+        text-align: center;
+        margin: 15px auto;
+    }
+}
+/* end header  */
+/* start content  */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content .text {
+    padding: 20px 0;
+}
+.content .text h2{
+    color: white;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+.content .text p{
+    width: 50%;
+    color: #eee;
+    text-transform: capitalize;
+    font-size: 18px;
+    line-height: 1;
+    padding: 5px;
+    margin-bottom: 25px;
+}
+.content .text a {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: black;
+    background-color: white;
+    border: 1px solid #eee;
+    padding: 10px 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.content .text a:hover {
+    background-color: dimgray;
+    color: white;
+    border-color: dimgrey;
+}
+.content .image img{
+    width: 200px;
+    cursor: pointer;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.content .image img:hover {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+@media (max-width:767px) {
+    .page .content {
+        flex-direction: column;
+        gap: 25px;
+        border-bottom: 1px solid #ccc;
+    }
+    .page .content .text {
+        text-align: center;
+    }
+    .page .content .text p{
+        width: 100%;
+    }
+}
+/* end content  */
+/* start icons */
+.container .icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 10px;
+    margin-top: 25px;
+}
+.container .icons img {
+    width: 150px;
+    cursor: pointer;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.container .icons img:hover {
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+}
+@media (max-width:767px) {
+    .container .icons{
+    display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+        .container .icons img {
+            width: 200px;
+        }
+        .container .icons img:not(:last-child){
+            border-bottom: 1px solid #eee;
+        }
+}
+/* end icons */
